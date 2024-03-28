@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
 
 import CartItem from "./CartItem";
 import { SidebarContext } from "../assets/context/SidebarContext";
-import { useContext, useState } from "react";
+import { useContext,  } from "react";
 import { CartContext } from "../assets/context/CartContext";
 
 const Sidebar = () =>{
     const {isOpen, handleClose} = useContext(SidebarContext);
-   const { cart } = useContext(CartContext);
+   const { cart, claerCart } = useContext(CartContext);
 
     // console.log(addToCart);
 
@@ -32,6 +32,19 @@ const Sidebar = () =>{
         {cart.map((item) =>{
             return <CartItem item={item} key={item.id} />;
         })}
+        </div>
+        <div>
+            <div className="flex w-full justify-between items-center my-1 ">
+                {/* total */}
+                <div className="uppercase font-semibold text-primary">
+                    <span className="mr-2">Total:</span>$ 1000
+                </div>
+                {/* clear cart icon */}
+                <div onClick={claerCart}
+                className="cursor-pointer py-4 bg-red-500 text-white w-10 h-10 flex justify-center items-center text-xl">
+                    <FiTrash2 />
+                </div>
+            </div>
         </div>
      </div>
     );
