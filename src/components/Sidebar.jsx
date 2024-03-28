@@ -9,9 +9,9 @@ import { CartContext } from "../assets/context/CartContext";
 
 const Sidebar = () =>{
     const {isOpen, handleClose} = useContext(SidebarContext);
-    const { addToCart } = useContext(CartContext);
+   const { cart } = useContext(CartContext);
 
-    console.log(addToCart);
+    // console.log(addToCart);
 
     return (
      <div className={`${isOpen ? 'right-0' : '-right-full'}  w-full bg-white fixed top-0 h-full shadow-2xl md:[35vw] xl:max-w-[30vw] 
@@ -27,6 +27,11 @@ const Sidebar = () =>{
             className="cursor-pointer w-8 h-8 flex items-center justify-center">
                 <IoMdArrowForward className="text-2xl"/>
             </div>
+        </div>
+        <div>
+        {cart.map((item) =>{
+            return <CartItem item={item} key={item.id} />;
+        })}
         </div>
      </div>
     );
