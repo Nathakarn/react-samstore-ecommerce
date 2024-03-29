@@ -2,7 +2,7 @@ import { IoMdClose, IoMdRemove } from "react-icons/io";
 import { Link } from "react-router-dom";
 import {IoMdAdd} from "react-icons/io"
 import { useContext } from "react";
-import { CartContext } from "../assets/context/CartContext";
+import { CartContext } from "../context/CartContext";
 
 
 Link

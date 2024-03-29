@@ -13,10 +13,10 @@ export default {
     },
   },
   screens: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1440px',
+    sm: '768px',
+    md: '1024px',
+    lg: '1440px',
+    xl: '2160px'
   },
   theme: {
     fontFamily: {
@@ -29,7 +29,7 @@ export default {
         secondary: '#F5E6E0',
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')",
+        hero: "url('./assets/bg_hero.svg')",
       },
     },
   },

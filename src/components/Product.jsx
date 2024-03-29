@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsPlus, BsEyeFill} from 'react-icons/bs';
-import { CartContext } from "../assets/context/CartContext";
+import { CartContext } from "../context/CartContext";
 
 const Product = ({ products }) =>{
     // console.log(products);

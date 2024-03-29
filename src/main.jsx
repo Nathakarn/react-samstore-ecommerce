@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 //Product provider
-import ProductProvider from './assets/context/ProductContext.jsx'
+import ProductProvider from './context/ProductContext.jsx'
 //sidebar provider
-import SidebarProvider from './assets/context/SidebarContext.jsx'
-import CartProvider from './assets/context/CartContext.jsx'
+import SidebarProvider from './context/SidebarContext.jsx'
+import CartProvider from './context/CartContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root'))
 
@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root'))
       <ProductProvider>
         <React.StrictMode>
           <App />
-        </React.StrictMode>,
+        </React.StrictMode>
       </ProductProvider>
     </CartProvider>
   </SidebarProvider>
