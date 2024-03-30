@@ -29,7 +29,7 @@ const Product = ({ products }) =>{
                         </div>
                     </button>
                     <Link
-                    to={'/product/${id}'}
+                    to={`/product/${id}`}
                     className="w-8 h-8 bg-white flex justify-center items-center text-primary drop-shadow-xl"
                     >
                     <BsEyeFill />
@@ -39,7 +39,7 @@ const Product = ({ products }) =>{
             {/* category & title & price */}
             <div>
                 <div className="text-sm capitalize text-gray-500">{category}</div>
-                <Link to={'/product/${id}'}>
+                <Link to={`/product/${id}`}>
                 <h2 className="font-black mb-1 text-slate-800">{title}</h2>
                 </Link>
                 <div className="font-black text-slate-600">$ {price}</div>
